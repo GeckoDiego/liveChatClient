@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Gecko SAS">
+    <link rel="icon" href="favicon.ico">
+
+    <title>LiveChat V1.0</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Main Script JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="external/js/maximize.js"></script>
+
+</head>
+
+<body>	
+	<div id="livechat-maxified-wrapper" role="main" class="container px-0">
+		<div class="page-header bg-dark text-white rounded-top">
+			<div class="d-flex justify-content-center row mx-0 py-1 small">
+				<div class="col-8 offset-2 text-center">
+					Livechat
+				</div>				
+				<div id="minimize" class="col-2 mx-0 px-0 pr-2 text-right" style="position: relative; top: 1px; cursor: pointer;" onclick="closeWindow()">
+					<i class="material-icons" style="font-size: 14px;">call_received</i>
+				</div>
+			</div>
+		</div>	  
+		<main class="px-4">
+			<div class="d-flex justify-content-center row mt-4 mx-0">
+				<h5>Welcome to <b>Audara</b> livechat</h5>
+			</div>
+			<div class="d-flex justify-content-center row mx-0">
+				<div class="col-10 text-center">
+					Please login to request a chat conversation
+				</div>
+			</div>
+			<div class="row mx-0 mt-2">
+				<input type="text" class="form-control" placeholder="Enter Name" />
+			</div>
+			<div class="row mt-3 mx-0">
+				<input type="text" class="form-control" placeholder="Enter E-mail" />
+			</div>
+			<div class="d-flex justify-content-center row mt-3 mx-0">
+				<p>What can we help with?</p>
+			</div>
+			<div class="row mx-0">
+				<select class="form-control">
+					<option>Billing matters</option>
+					<option>Support</option>
+					<option>Sales</option>
+				</select>
+			</div>
+			<div class="row mt-4 mb-4 mx-0">
+				<button type="button" class="btn btn-block btn-danger">Start Chat</button>
+			</div>
+		</main>
+		<main class="px-4 d-none">
+			<div class="row">
+				<div class="col-2">
+				</div>
+				<div class="col-10">
+					
+				</div>
+				<div class="col-2">
+					
+				</div>
+			</div>
+		</main>
+		<div class="page-footer bg-dark text-white rounded-bottom">
+			<div class="row mx-0 py-1 small">
+				<div class="col-6">
+					Options
+				</div>
+				<div class="col-6 text-right">
+					Powered by Audara
+				</div>	    	
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

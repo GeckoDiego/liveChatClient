@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Gecko SAS">
+    <link rel="icon" href="favicon.ico">
+
+    <title>LiveChat V1.0</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Main Script JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="external/js/maximize.js"></script>
+    <style type="text/css">
+    	html,
+		body {
+			min-width: 600px;
+		 	height: 100%;
+		}
+    	body {
+		  display: -ms-flexbox;
+		  display: -webkit-box;
+		  display: flex;
+		  -ms-flex-align: center;
+		  -ms-flex-pack: center;
+		  -webkit-box-align: center;
+		  align-items: center;
+		  -webkit-box-pack: center;
+		  justify-content: center;		
+		  background-color: #08141f;
+		}
+		a:hover {
+	    	color: #c7cfd8;
+		}
+		.actionIcon{
+			color: #e9ecef;
+		}
+		.livechat-theme-red{
+			color: #f6292b;
+		}
+		.dot {
+		  height: 50px;
+		  width: 50px;
+		  border: 2px white solid;
+		  border-radius: 50%;
+		  display: inline-block;		 
+		}
+		.dot:active, .dot:focus, .dot-danger:active, .dot-danger:focus {
+			box-shadow: none  !important;
+		}
+		.dot-danger{
+			height: 50px;
+		  	width: 50px;
+		  	border: 2px #c82333 solid;
+		  	border-radius: 50%;
+		  	display: inline-block;	
+		}
+		.dot i, .dot-danger i{
+			position: relative;
+			top: 3px;
+		}
+		#livechat-maxified-wrapper{
+			width: 100%;
+		}
+		.page-header{
+			position: fixed;
+			z-index: 99999;
+			top: 0px;
+			width: 100%;			
+		}
+		.page-footer{
+			position: fixed;
+			z-index: 99999;
+			bottom: 0px;
+			width: 100%;			
+		}
+		.mainContent{
+			margin:27px 0px 27px 0px;
+		}
+    </style>
+
+</head>
+
+<body class="align-middle" onbeforeunload="closeWindow()">	
+	<div id="livechat-maxified-wrapper" role="main" class="no-gutters">
+		<div class="page-header bg-dark text-white">
+			<div class="d-flex justify-content-center row mx-0 py-1 small">
+				<div class="col-8 offset-2 text-center">
+					Livechat
+				</div>				
+				<div id="minimize" class="col-2 mx-0 px-0 pr-2 text-right" style="position: relative; top: 1px; cursor: pointer;" onclick="closeWindow()">
+					<i class="material-icons" style="font-size: 14px;">call_received</i>
+				</div>
+			</div>
+		</div>	  
+		<main class="mainContent">
+			<div class="row mx-0">				
+				<div id="videoContent" class="col-12">
+					<div class="row mx-0 my-4 text-white">
+						<div class="col-11">
+							<span><b>Hank Moody</b></span>
+							<span><a>Customer Advocate</a></span>
+						</div>
+						<div class="col-1">
+							<a>00:21</a>
+						</div>
+					</div>
+					<div class="row mx-0 d-flex justify-content-center">
+						<div class="col-12 text-center">
+							<img src="external/img/thumb.png" class="img-fluid" />
+						</div>						
+					</div>
+					<div class="row mx-0 my-4 d-flex justify-content-center">
+						<button type="button" class="btn btn-outline-light dot"><i class="material-icons" style="font-size: 24px;">video_call</i></button>
+						<button type="button" class="btn btn-outline-light dot ml-2"><i class="material-icons" style="font-size: 24px;">keyboard_voice</i></button>
+						<button type="button" class="btn btn-outline-light dot ml-2" onclick="collapseChat()"><i class="material-icons" style="font-size: 24px;">chat</i></button>
+						<button type="button" class="btn btn-danger dot-danger ml-2"><i class="material-icons" style="font-size: 24px;">call_end</i></button>
+					</div>					
+				</div>
+				<div id="chatContent" class="col-4 bg-white d-none">
+					Chat
+				</div>
+			</div>		
+		</main>
+		<div class="page-footer bg-dark text-white" style="height: 27px;">
+			<div class="row mx-0 py-0 small" style="position: relative; top: 3px;">
+				<div class="col-6 pl-2 text-left">
+					<a class="actionIcon" href=""><i class="material-icons" style="font-size: 20px;">volume_up</i></a> 
+					<a class="actionIcon pl-1" href=""><i class="material-icons" style="font-size: 20px;">email</i></a>   
+				</div>
+				<div class="col-6 text-right">
+					Powered by <b class="livechat-theme-red">Audara</b>
+				</div>	    	
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
